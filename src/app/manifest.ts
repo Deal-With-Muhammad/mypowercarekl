@@ -5,7 +5,7 @@ import en from "@/i18n/dictionaries/en";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: site.name,
-    short_name: site.name,
+    short_name: "My Power Care",
     description: en.meta.tagline,
     start_url: "/",
     display: "standalone",

@@ -11,7 +11,6 @@ import {
   PiWrenchDuotone,
 } from "react-icons/pi";
 import { Breadcrumbs } from "@/components/sections/Breadcrumbs";
-import { ReviewsSection } from "@/components/sections/Reviews";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMetadata } from "@/lib/metadata";
@@ -93,9 +92,7 @@ export default async function AboutPage(props: PageProps<"/[lang]/about">) {
         </div>
       </section>
 
-      <ReviewsSection limit={3} />
-
-      <section className="py-14">
+      <section className="bg-canvas py-14">
         <div className="container-page text-center">
           <h2 className="text-2xl font-bold sm:text-3xl">{t.about.pricesTitle}</h2>
           <p className="mx-auto mt-2 max-w-xl text-slate-text">{t.about.pricesText}</p>

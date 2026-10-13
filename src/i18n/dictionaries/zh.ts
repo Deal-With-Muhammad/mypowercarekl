@@ -8,7 +8,7 @@ const sp = (name: string) => (/[A-Za-z0-9)]$/.test(name) ? `${name} ` : name);
 
 const zh: Dictionary = {
   meta: {
-    siteTitle: "吉隆坡与雪兰莪电工上门服务 | KL Electrician",
+    siteTitle: "吉隆坡与雪兰莪电工上门服务 | My Power Care KL",
     siteDescription:
       "吉隆坡与雪兰莪当天上门电工：跳电跳掣、拉线、电箱（DB box）、灯具、插座和热水器。价格透明，12个月施工保修。WhatsApp询价。",
     tagline: "为吉隆坡及巴生谷的住家和商家提供当天上门电工服务",
@@ -18,19 +18,18 @@ const zh: Dictionary = {
     short: "每天早上8点至晚上10点营业",
   },
   whatsapp: {
-    default: "KL Electrician您好，我需要电工，请问可以帮忙吗？",
-    service: (name: string) => `KL Electrician您好，我想咨询：${name}。`,
-    area: (name: string) => `KL Electrician您好，我在${name}，需要电工。`,
-    price: "KL Electrician您好，请问这项工作多少钱？",
-    question: "KL Electrician您好，我想请问：",
-    guide: (title: string) => `KL Electrician您好，我看了你们的指南「${title}」，想请教一个问题。`,
+    default: "My Power Care KL您好，我需要电工，请问可以帮忙吗？",
+    service: (name: string) => `My Power Care KL您好，我想咨询：${name}。`,
+    area: (name: string) => `My Power Care KL您好，我在${name}，需要电工。`,
+    price: "My Power Care KL您好，请问这项工作多少钱？",
+    question: "My Power Care KL您好，我想请问：",
+    guide: (title: string) => `My Power Care KL您好，我看了你们的指南「${title}」，想请教一个问题。`,
   },
   nav: {
     services: "服务",
     pricing: "价格",
     areas: "地区",
     areasLong: "服务地区",
-    reviews: "评价",
     guides: "指南",
     faq: "常见问题",
     about: "关于我们",
@@ -47,7 +46,6 @@ const zh: Dictionary = {
     closeMenu: "关闭菜单",
     menu: "网站菜单",
     language: "语言",
-    quickContact: "快速联系",
   },
   cta: {
     whatsapp: "WhatsApp",
@@ -121,12 +119,11 @@ const zh: Dictionary = {
     ],
   },
   home: {
-    metaTitle: "吉隆坡与雪兰莪电工 | 当天上门服务 | KL Electrician",
+    metaTitle: "吉隆坡与雪兰莪电工 | 当天上门服务 | My Power Care KL",
     metaDescription:
       "吉隆坡与雪兰莪电工当天上门：跳电跳掣、拉线、电箱（DB box）、灯具、插座和热水器。先给固定报价再开工，上门费RM80，12个月施工保修。WhatsApp询价。",
     h1: "吉隆坡与雪兰莪电工",
     sub: "住家、公寓和店铺的电路维修、拉线与安装。开工前先报固定价格。",
-    rating: (n: number) => `共${n}条评价`,
     carouselLabel: "我们的电工服务",
     showSlide: (label: string) => `查看：${label}`,
     slides: {
@@ -166,28 +163,13 @@ const zh: Dictionary = {
     text: "WhatsApp发照片询价，或致电预约。",
     points: (months: number, hours: string) => ["当天上门服务", "开工前给固定报价", `${months}个月施工保修`, hours],
   },
-  reviews: {
-    eyebrow: "顾客评价",
-    title: "顾客怎么说",
-    areaTitle: (name: string) => `${sp(name)}及附近地区的顾客评价`,
-    basedOn: (n: number) => `根据${n}条顾客评价`,
-    readAll: "查看全部评价",
-    stars: (n: number) => `${n}星（满分5星）`,
-    google: "Google评价",
-    metaTitle: "顾客评价",
-    metaDescription: "看看吉隆坡、八打灵再也、梳邦再也、莎阿南及巴生谷各地的顾客，如何评价KL Electrician的电工服务。",
-    h1: "顾客评价",
-    intro: "来自巴生谷各地屋主、房东和店主的反馈。",
-    leaveText: "我们为您服务过吗？欢迎留下您的评价。",
-    leave: "在Google留下评价",
-  },
   service: {
     priceFrom: "起价",
     service: "服务",
     sameDay: "当天上门",
     warranty: "保修",
     months: (m: number) => `${m}个月`,
-    imageAlt: (name: string) => `KL Electrician提供的${sp(name)}服务`,
+    imageAlt: (name: string) => `My Power Care KL提供的${sp(name)}服务`,
     signsTitle: (name: string) => `什么情况需要${name}？`,
     costTitle: (name: string) => `吉隆坡${sp(name)}多少钱？`,
     costText: (name: string, updated: string) =>
@@ -208,7 +190,7 @@ const zh: Dictionary = {
     intro: (n: number) =>
       `${n}项服务，适用于住家、公寓和店铺，从换一个插座到全屋换电线都能做。每项工作开工前先报价，离开前全面测试，并享有施工保修。`,
     categoriesLabel: "服务类别",
-    listName: "KL Electrician电工服务",
+    listName: "My Power Care KL电工服务",
   },
   area: {
     metaTitle: (name: string, state: string) => `${sp(name)}电工 | ${state}当天上门服务`,
@@ -279,7 +261,7 @@ const zh: Dictionary = {
     h1: "马来西亚屋主实用指南",
     intro: "价格、规定和实用解决方法，由每天在吉隆坡和雪兰莪施工的电工撰写。",
     minRead: (n: number) => `阅读约${n}分钟`,
-    by: "KL Electrician团队撰写",
+    by: "My Power Care KL团队撰写",
     updated: "更新于",
     shortAnswer: "简短回答",
     inThisGuide: "本指南内容",
@@ -297,12 +279,12 @@ const zh: Dictionary = {
   about: {
     metaTitle: "关于我们",
     metaDescription:
-      "KL Electrician为吉隆坡、雪兰莪和布城提供电路维修、拉线和安装服务。当天上门、固定报价，享12个月施工保修。",
+      "My Power Care KL为吉隆坡、雪兰莪和布城提供电路维修、拉线和安装服务。当天上门、固定报价，享12个月施工保修。",
     h1: "电工工作，一次做好",
     p1: (years: number) =>
-      `KL Electrician为吉隆坡、雪兰莪和布城的住家、公寓和店铺提供电路维修、拉线和安装服务。我们的团队拥有${years}年经验，用心做好每一项工作。`,
+      `My Power Care KL为吉隆坡、雪兰莪和布城的住家、公寓和店铺提供电路维修、拉线和安装服务。我们的团队拥有${years}年经验，用心做好每一项工作。`,
     p2: "我们的做法很简单：价格清楚、当天上门、施工整洁，保修有保障。",
-    imageAlt: "KL Electrician电工正在施工",
+    imageAlt: "My Power Care KL电工正在施工",
     eyebrow: "我们的工作方式",
     title: "您可以期待的服务",
     promises: (months: number) => [
@@ -319,7 +301,7 @@ const zh: Dictionary = {
     pricesTitle: "看看我们的收费",
     pricesText: "我们的价格表公开透明，让您心中有数。",
     pricesButton: "查看价格表",
-    schemaName: "关于KL Electrician",
+    schemaName: "关于My Power Care KL",
   },
   contact: {
     metaTitle: "联系我们 · 预约吉隆坡电工上门",
@@ -327,7 +309,7 @@ const zh: Dictionary = {
       "预约吉隆坡或雪兰莪电工上门。WhatsApp或致电询价，也可在线提交预约。当天上门服务，每天早上8点至晚上10点营业。",
     h1: "联系我们或预约电工",
     intro: "WhatsApp是联系我们最快的方式。发送您的位置和问题照片，我们会回复价格范围和最早可上门的时间。",
-    schemaName: "联系KL Electrician",
+    schemaName: "联系My Power Care KL",
     whatsappTitle: "WhatsApp（最快）",
     whatsappNote: "发照片或视频，快速报价",
     callTitle: "电话",
@@ -367,9 +349,9 @@ const zh: Dictionary = {
     successTitle: "已收到您的请求",
     successText: "谢谢！我们会尽快致电或WhatsApp您，确认价格和时间。如有急事，请直接发信息给我们。",
     successButton: "WhatsApp发信息给我们",
-    successMessage: "KL Electrician您好，我刚提交了预约请求：",
+    successMessage: "My Power Care KL您好，我刚提交了预约请求：",
     unconfigured: "在线预约暂未开通。请点击下方，通过WhatsApp发送相同资料。",
-    unconfiguredMessage: "KL Electrician您好，我想预约：",
+    unconfiguredMessage: "My Power Care KL您好，我想预约：",
     sendWhatsapp: "通过WhatsApp发送",
     errors: {
       name: "请输入您的名字。",
@@ -395,7 +377,7 @@ const zh: Dictionary = {
   },
   privacy: {
     metaTitle: "隐私政策",
-    metaDescription: "KL Electrician如何根据马来西亚《2010年个人资料保护法令》（PDPA）收集、使用和保护您的个人资料。",
+    metaDescription: "My Power Care KL如何根据马来西亚《2010年个人资料保护法令》（PDPA）收集、使用和保护您的个人资料。",
     h1: "隐私政策",
     updated: "最后更新：2026年10月1日",
     intro: (company: string) =>

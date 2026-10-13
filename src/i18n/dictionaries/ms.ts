@@ -4,7 +4,7 @@ import type { Dictionary } from "./en";
 
 const ms: Dictionary = {
   meta: {
-    siteTitle: "Tukang Elektrik KL & Selangor | KL Electrician",
+    siteTitle: "Tukang Elektrik KL & Selangor | My Power Care KL",
     siteDescription:
       "Tukang elektrik hari yang sama di KL & Selangor: elektrik trip, wiring rumah, DB box, lampu, plug point dan water heater. Harga jelas, jaminan 12 bulan.",
     tagline: "Tukang elektrik hari yang sama untuk rumah dan perniagaan di Kuala Lumpur dan Lembah Klang",
@@ -14,19 +14,18 @@ const ms: Dictionary = {
     short: "Buka setiap hari 8 pagi–10 malam",
   },
   whatsapp: {
-    default: "Hai KL Electrician, saya perlukan tukang elektrik. Boleh bantu?",
-    service: (name: string) => `Hai KL Electrician, saya perlukan bantuan untuk: ${name}.`,
-    area: (name: string) => `Hai KL Electrician, saya perlukan tukang elektrik di ${name}.`,
-    price: "Hai KL Electrician, boleh saya dapatkan harga untuk kerja ini?",
-    question: "Hai KL Electrician, saya ada soalan:",
-    guide: (title: string) => `Hai KL Electrician, saya baca panduan "${title}" dan ada soalan.`,
+    default: "Hai My Power Care KL, saya perlukan tukang elektrik. Boleh bantu?",
+    service: (name: string) => `Hai My Power Care KL, saya perlukan bantuan untuk: ${name}.`,
+    area: (name: string) => `Hai My Power Care KL, saya perlukan tukang elektrik di ${name}.`,
+    price: "Hai My Power Care KL, boleh saya dapatkan harga untuk kerja ini?",
+    question: "Hai My Power Care KL, saya ada soalan:",
+    guide: (title: string) => `Hai My Power Care KL, saya baca panduan "${title}" dan ada soalan.`,
   },
   nav: {
     services: "Servis",
     pricing: "Harga",
     areas: "Kawasan",
     areasLong: "Kawasan liputan kami",
-    reviews: "Ulasan",
     guides: "Panduan",
     faq: "Soalan Lazim",
     about: "Tentang Kami",
@@ -43,7 +42,6 @@ const ms: Dictionary = {
     closeMenu: "Tutup menu",
     menu: "Menu laman",
     language: "Bahasa",
-    quickContact: "Hubungi segera",
   },
   cta: {
     whatsapp: "WhatsApp",
@@ -117,12 +115,11 @@ const ms: Dictionary = {
     ],
   },
   home: {
-    metaTitle: "Tukang Elektrik KL & Selangor | Servis Hari Yang Sama",
+    metaTitle: "Tukang Elektrik Kuala Lumpur & Selangor | My Power Care KL",
     metaDescription:
       "Tukang elektrik hari yang sama di KL & Selangor: elektrik trip, wiring rumah, tukar DB box, lampu, plug point, water heater. Lawatan RM80, jaminan 12 bulan.",
     h1: "Tukang Elektrik di Kuala Lumpur & Selangor",
     sub: "Kerja baiki, wiring dan pemasangan untuk rumah, kondo dan kedai. Harga tetap sebelum kami mula.",
-    rating: (n: number) => `daripada ${n} ulasan`,
     carouselLabel: "Servis elektrik kami",
     showSlide: (label: string) => `Lihat ${label}`,
     slides: {
@@ -173,29 +170,13 @@ const ms: Dictionary = {
       hours,
     ],
   },
-  reviews: {
-    eyebrow: "Ulasan",
-    title: "Kata pelanggan kami",
-    areaTitle: (name: string) => `Ulasan dari ${name} dan kawasan berdekatan`,
-    basedOn: (n: number) => `Berdasarkan ${n} ulasan pelanggan`,
-    readAll: "Baca semua ulasan",
-    stars: (n: number) => `${n} daripada 5 bintang`,
-    google: "Ulasan Google",
-    metaTitle: "Ulasan Pelanggan Tukang Elektrik KL",
-    metaDescription:
-      "Apa kata pelanggan di Kuala Lumpur, Petaling Jaya, Subang Jaya, Shah Alam dan seluruh Lembah Klang tentang servis tukang elektrik KL Electrician.",
-    h1: "Ulasan pelanggan",
-    intro: "Maklum balas daripada pemilik rumah, tuan rumah dan pemilik kedai di seluruh Lembah Klang.",
-    leaveText: "Pernah guna servis kami? Kami hargai maklum balas anda.",
-    leave: "Tulis ulasan Google",
-  },
   service: {
     priceFrom: "Harga dari",
     service: "Servis",
     sameDay: "Hari yang sama",
     warranty: "Jaminan",
     months: (m: number) => `${m} bulan`,
-    imageAlt: (name: string) => `${name} oleh KL Electrician`,
+    imageAlt: (name: string) => `${name} oleh My Power Care KL`,
     signsTitle: (name: string) => `Tanda anda perlukan servis ${name}`,
     costTitle: (name: string) => `Berapa harga ${name} di KL?`,
     costText: (name: string, updated: string) =>
@@ -216,10 +197,11 @@ const ms: Dictionary = {
     intro: (n: number) =>
       `${n} servis untuk rumah, kondo dan kedai, daripada satu plug point hingga tukar wiring seluruh rumah. Setiap kerja diberi sebut harga sebelum kami mula, diuji sebelum kami pulang dan dilindungi jaminan mutu kerja kami.`,
     categoriesLabel: "Kategori servis",
-    listName: "Servis elektrik oleh KL Electrician",
+    listName: "Servis elektrik oleh My Power Care KL",
   },
   area: {
-    metaTitle: (name: string, state: string) => `Tukang Elektrik ${name}, ${state}: Servis Hari Yang Sama`,
+    metaTitle: (name: string, state: string) =>
+      `Tukang Elektrik ${name.endsWith(state) ? name : `${name}, ${state}`}: Servis Hari Yang Sama`,
     metaDescription: (name: string, visit: string, months: number) =>
       `Tukang elektrik hari yang sama di ${name}: elektrik trip, wiring, DB box, lampu, water heater. Harga jelas, lawatan ${visit}, jaminan ${months} bulan. WhatsApp kami.`,
     eyebrow: (state: string) => `${state} · Tukang elektrik berdekatan anda`,
@@ -291,7 +273,7 @@ const ms: Dictionary = {
     intro:
       "Harga, peraturan dan cara penyelesaian praktikal, ditulis oleh tukang elektrik yang buat kerja ini setiap hari di Kuala Lumpur dan Selangor.",
     minRead: (n: number) => `${n} minit bacaan`,
-    by: "Oleh pasukan KL Electrician",
+    by: "Oleh pasukan My Power Care KL",
     updated: "Dikemas kini",
     shortAnswer: "Jawapan ringkas",
     inThisGuide: "Dalam panduan ini",
@@ -309,12 +291,12 @@ const ms: Dictionary = {
   about: {
     metaTitle: "Tentang Kami",
     metaDescription:
-      "KL Electrician membuat kerja baiki elektrik, wiring dan pemasangan di KL, Selangor dan Putrajaya. Servis hari yang sama, sebut harga tetap, jaminan 12 bulan.",
+      "My Power Care KL membuat kerja baiki elektrik, wiring dan pemasangan di KL, Selangor dan Putrajaya. Servis hari yang sama, sebut harga tetap, jaminan 12 bulan.",
     h1: "Kerja elektrik yang dibuat dengan betul, dari kali pertama",
     p1: (years: number) =>
-      `KL Electrician menjalankan kerja baiki elektrik, wiring dan pemasangan untuk rumah, kondo dan kedai di seluruh Kuala Lumpur, Selangor dan Putrajaya. Pasukan kami membawa ${years} tahun pengalaman ke dalam setiap kerja.`,
+      `My Power Care KL menjalankan kerja baiki elektrik, wiring dan pemasangan untuk rumah, kondo dan kedai di seluruh Kuala Lumpur, Selangor dan Putrajaya. Pasukan kami membawa ${years} tahun pengalaman ke dalam setiap kerja.`,
     p2: "Cara kami mudah: harga yang jelas, lawatan hari yang sama, kerja yang kemas dan jaminan yang boleh diharap.",
-    imageAlt: "Tukang elektrik KL Electrician sedang bekerja",
+    imageAlt: "Tukang elektrik My Power Care KL sedang bekerja",
     eyebrow: "Cara kami bekerja",
     title: "Apa yang anda boleh harapkan",
     promises: (months: number) => [
@@ -343,7 +325,7 @@ const ms: Dictionary = {
     pricesTitle: "Lihat caj kami",
     pricesText: "Senarai harga kami terbuka kepada umum, jadi anda tahu apa yang dijangka.",
     pricesButton: "Lihat senarai harga",
-    schemaName: "Tentang KL Electrician",
+    schemaName: "Tentang My Power Care KL",
   },
   contact: {
     metaTitle: "Hubungi & Tempah Tukang Elektrik di KL",
@@ -352,7 +334,7 @@ const ms: Dictionary = {
     h1: "Hubungi kami atau tempah tukang elektrik",
     intro:
       "WhatsApp ialah cara paling cepat untuk hubungi kami. Hantar lokasi anda dan gambar masalah, dan kami akan balas dengan anggaran harga dan masa paling awal kami boleh datang.",
-    schemaName: "Hubungi KL Electrician",
+    schemaName: "Hubungi My Power Care KL",
     whatsappTitle: "WhatsApp (paling cepat)",
     whatsappNote: "Hantar gambar atau video untuk harga segera",
     callTitle: "Telefon",
@@ -400,10 +382,10 @@ const ms: Dictionary = {
     successText:
       "Terima kasih. Kami akan telefon atau WhatsApp anda sebentar lagi untuk sahkan harga dan masa. Untuk hal yang mendesak, mesej kami terus.",
     successButton: "Mesej kami di WhatsApp",
-    successMessage: "Hai KL Electrician, saya baru hantar permintaan tempahan:",
+    successMessage: "Hai My Power Care KL, saya baru hantar permintaan tempahan:",
     unconfigured:
       "Tempahan dalam talian belum disambungkan. Tekan di bawah untuk hantar butiran yang sama melalui WhatsApp.",
-    unconfiguredMessage: "Hai KL Electrician, saya ingin membuat tempahan:",
+    unconfiguredMessage: "Hai My Power Care KL, saya ingin membuat tempahan:",
     sendWhatsapp: "Hantar melalui WhatsApp",
     errors: {
       name: "Sila masukkan nama anda.",
@@ -431,7 +413,7 @@ const ms: Dictionary = {
   privacy: {
     metaTitle: "Dasar Privasi",
     metaDescription:
-      "Cara KL Electrician mengumpul, menggunakan dan melindungi data peribadi anda di bawah Akta Perlindungan Data Peribadi 2010 (PDPA) Malaysia.",
+      "Cara My Power Care KL mengumpul, menggunakan dan melindungi data peribadi anda di bawah Akta Perlindungan Data Peribadi 2010 (PDPA) Malaysia.",
     h1: "Dasar privasi",
     updated: "Kali terakhir dikemas kini 1 Oktober 2026",
     intro: (company: string) =>

@@ -34,9 +34,13 @@ export async function Footer() {
   const featuredAreas = areas.filter((a) => a.featured).slice(0, 9);
   const services = getServicesBySlug(locale, footerServices);
 
+  const socials = [
+    { href: site.social.facebook, label: "Facebook", Icon: FaFacebookF },
+    { href: site.social.instagram, label: "Instagram", Icon: FaInstagram },
+  ].filter((s) => s.href);
+
   const company = [
     { href: href("/pricing"), label: t.nav.priceList },
-    { href: href("/reviews"), label: t.nav.reviews },
     { href: href("/guides"), label: t.nav.guides },
     { href: href("/faq"), label: t.nav.faq },
     { href: href("/about"), label: t.nav.about },
@@ -48,13 +52,25 @@ export async function Footer() {
     <footer className="bg-navy text-white/65">
       <div className="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_0.8fr]">
         <div>
-          <Logo href={href("/")} inverted className="w-[160px]" />
+          <Logo href={href("/")} inverted className="w-[210px]" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed">{t.footer.blurb}</p>
           <ul className="mt-6 space-y-3 text-sm">
             <li className="flex items-center gap-2.5">
               <PiPhoneDuotone className="size-5 shrink-0 text-[#8fb3ff]" aria-hidden />
               <a href={telLink} data-cta="footer" className="transition-colors hover:text-white">
                 {site.phoneDisplay}
+              </a>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <FaWhatsapp className="size-5 shrink-0 text-[#8fb3ff]" aria-hidden />
+              <a
+                href={whatsappLink(t.whatsapp.default)}
+                target="_blank"
+                rel="noopener"
+                data-cta="footer"
+                className="transition-colors hover:text-white"
+              >
+                {t.cta.whatsappUs}
               </a>
             </li>
             <li className="flex items-center gap-2.5">
@@ -68,25 +84,22 @@ export async function Footer() {
               {t.hours.display}
             </li>
           </ul>
-          <div className="mt-6 flex gap-2">
-            {[
-              { href: site.social.facebook, label: "Facebook", Icon: FaFacebookF },
-              { href: site.social.instagram, label: "Instagram", Icon: FaInstagram },
-              { href: whatsappLink(t.whatsapp.default), label: "WhatsApp", Icon: FaWhatsapp },
-            ].map(({ href: link, label, Icon }) => (
-              <a
-                key={label}
-                href={link}
-                target="_blank"
-                rel="noopener"
-                aria-label={label}
-                data-cta="footer"
-                className="grid size-9 pressable place-items-center rounded-md bg-white/10 text-white transition-colors hover:bg-white/20"
-              >
-                <Icon className="size-4" />
-              </a>
-            ))}
-          </div>
+          {socials.length > 0 && (
+            <div className="mt-6 flex gap-2">
+              {socials.map(({ href: link, label, Icon }) => (
+                <a
+                  key={label}
+                  href={link}
+                  target="_blank"
+                  rel="noopener"
+                  aria-label={label}
+                  className="grid size-9 pressable place-items-center rounded-md bg-white/10 text-white transition-colors hover:bg-white/20"
+                >
+                  <Icon className="size-4" />
+                </a>
+              ))}
+            </div>
+          )}
         </div>
 
         <Column title={t.footer.services}>

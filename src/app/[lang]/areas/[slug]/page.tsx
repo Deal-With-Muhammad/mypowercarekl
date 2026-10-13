@@ -6,7 +6,6 @@ import { PageHero } from "@/components/sections/PageHero";
 import { ServiceTile } from "@/components/sections/ServiceCard";
 import { PriceTable } from "@/components/sections/PriceTable";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
-import { ReviewsSection } from "@/components/sections/Reviews";
 import { QuoteSidebar } from "@/components/sections/QuoteSidebar";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/JsonLd";
@@ -138,7 +137,6 @@ export default async function AreaPage(props: PageProps<"/[lang]/areas/[slug]">)
         intro={area.intro}
         image={image}
         imageAlt={t.area.imageAlt(name)}
-        whatsappMessage={message}
         facts={[
           { label: t.area.arrival, value: t.etaShort(area.eta[0], area.eta[1]) },
           { label: t.area.visitFrom, value: formatRM(visitFee) },
@@ -246,8 +244,6 @@ export default async function AreaPage(props: PageProps<"/[lang]/areas/[slug]">)
         </aside>
       </div>
 
-      {/* Reviews are tagged with English area names. */}
-      <ReviewsSection areaName={shortAreaName(getArea("en", slug)!.name)} limit={3} title={t.reviews.areaTitle(name)} />
       <CtaBand title={t.ctaBand.areaTitle(name)} message={message} />
     </>
   );

@@ -26,6 +26,7 @@ const menuSlugs = [
 
 export async function Header() {
   const { locale, t, href } = await getI18n();
+  const wa = whatsappLink(t.whatsapp.default);
   const total = getServices(locale).length;
   const menu = getServicesBySlug(locale, menuSlugs).map((s) => ({
     slug: s.slug,
@@ -36,7 +37,6 @@ export async function Header() {
   const links = [
     { href: href("/pricing"), label: t.nav.pricing },
     { href: href("/areas"), label: t.nav.areas },
-    { href: href("/reviews"), label: t.nav.reviews },
     { href: href("/about"), label: t.nav.about },
     { href: href("/contact"), label: t.nav.contact },
   ];
@@ -53,7 +53,7 @@ export async function Header() {
 
       <div className="border-b border-line/80 bg-white/90 backdrop-blur-md supports-[backdrop-filter]:bg-white/80">
         <div className="container-page flex h-16 items-center justify-between gap-3 sm:gap-6 lg:h-[72px]">
-          <Logo href={href("/")} className="w-[148px] sm:w-[168px]" />
+          <Logo href={href("/")} className="w-[176px] sm:w-[210px]" />
 
           <nav aria-label={t.nav.main} className="hidden lg:block">
             <ul className="flex items-center gap-0.5 text-[0.94rem] font-medium text-ink/80">
@@ -112,6 +112,8 @@ export async function Header() {
             </ul>
           </nav>
 
+          {/* The site's one always-visible contact point: phone and WhatsApp.
+              Full number and button on wide screens, compact icons on phones. */}
           <div className="flex items-center gap-1.5">
             <div className="hidden lg:block">
               <LanguageMenu current={locale} label={t.nav.language} />
@@ -125,7 +127,15 @@ export async function Header() {
               {site.phoneDisplay}
             </a>
             <a
-              href={whatsappLink(t.whatsapp.default)}
+              href={telLink}
+              data-cta="header"
+              aria-label={t.cta.callNumber(site.phoneDisplay)}
+              className="grid size-10 pressable place-items-center rounded-md bg-brand-50 text-brand xl:hidden"
+            >
+              <PiPhoneFill className="size-5" aria-hidden />
+            </a>
+            <a
+              href={wa}
               data-cta="header"
               target="_blank"
               rel="noopener"
@@ -134,13 +144,22 @@ export async function Header() {
               <FaWhatsapp className="size-4" aria-hidden />
               {t.cta.whatsapp}
             </a>
+            <a
+              href={wa}
+              data-cta="header"
+              target="_blank"
+              rel="noopener"
+              aria-label={t.cta.whatsappUs}
+              className="grid size-10 pressable place-items-center rounded-md bg-whatsapp text-white sm:hidden"
+            >
+              <FaWhatsapp className="size-5" aria-hidden />
+            </a>
             <MobileNav
               locale={locale}
               services={menu.map(({ slug, name }) => ({ name, href: href(`/services/${slug}`) }))}
               links={[
                 { href: href("/pricing"), label: t.nav.pricing },
                 { href: href("/areas"), label: t.nav.areasLong },
-                { href: href("/reviews"), label: t.nav.reviews },
                 { href: href("/guides"), label: t.nav.guides },
                 { href: href("/faq"), label: t.nav.faq },
                 { href: href("/about"), label: t.nav.about },
@@ -157,9 +176,8 @@ export async function Header() {
                 language: t.nav.language,
                 hours: t.cta.sameDayHours(t.hours.short),
                 call: t.cta.call,
-                callNumber: t.cta.callNumber(site.phoneDisplay),
                 whatsapp: t.cta.whatsapp,
-                whatsappHref: whatsappLink(t.whatsapp.default),
+                whatsappHref: wa,
               }}
             />
           </div>

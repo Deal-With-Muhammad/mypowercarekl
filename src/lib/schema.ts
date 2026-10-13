@@ -3,7 +3,7 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { getAreas, getServices, shortAreaName } from "@/lib/content";
 import { visitFee } from "@/data/pricing";
 import type { Area, Faq, Guide, Service } from "@/lib/types";
-import { absoluteUrl, site } from "@/lib/site";
+import { absoluteUrl, site, socialLinks } from "@/lib/site";
 
 // JSON-LD helpers. The business keeps one @id in every language so search
 // engines and AI assistants see a single entity with three language versions.
@@ -51,6 +51,7 @@ export function businessSchema(locale: Locale) {
         "@type": "Electrician",
         "@id": businessId,
         name: site.name,
+        alternateName: site.alternateNames,
         legalName: site.legalName,
         url: site.url,
         logo: absoluteUrl("/logo.png"),
@@ -82,13 +83,14 @@ export function businessSchema(locale: Locale) {
             priceSpecification: { "@type": "PriceSpecification", minPrice: s.priceFrom, priceCurrency: "MYR" },
           })),
         },
-        sameAs: Object.values(site.social),
+        ...(socialLinks.length ? { sameAs: socialLinks } : {}),
       },
       {
         "@type": "WebSite",
         "@id": websiteId,
         url: site.url,
         name: site.name,
+        alternateName: site.alternateNames,
         publisher: { "@id": businessId },
         inLanguage: ["en-MY", "ms-MY", "zh-MY"],
       },

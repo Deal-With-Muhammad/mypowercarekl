@@ -15,7 +15,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "市场价格差距很大，因为有些报价用明装线槽和便宜电线，有些则是全暗线，连打墙和批灰都包在内。比较报价时，要看点位数量、电线规格和不包括哪些项目，而不是只看总价。也要问清楚有没有包括新电箱；老房子换电线几乎都需要连电箱一起换。",
         ],
         table: {
-          head: ["房屋类型", "市场价格（巴生谷）", "KL Electrician", "一般工期"],
+          head: ["房屋类型", "市场价格（巴生谷）", "My Power Care KL", "一般工期"],
           rows: [
             ["公寓（2–3房）", "RM3,000 – RM12,000", "RM6,000 – RM10,000", "2–4天"],
             ["单层排屋", "RM4,000 – RM15,000", "RM8,000 – RM13,000", "3–5天"],
@@ -187,7 +187,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "如果故障出在电器内部，我们会直接告诉你。很多时候修理或更换电器，会比继续做电气工程更便宜。热水器和冷气故障可能需要厂家的售后技术人员处理，我们可以先确认电线部分是安全的。",
         ],
         table: {
-          head: ["项目", "市场价格", "KL Electrician"],
+          head: ["项目", "市场价格", "My Power Care KL"],
           rows: [
             ["上门检查（最低收费）", "最高RM150", "每次RM80"],
             ["查找故障与测试（第一小时）", "RM100 – RM400", "RM150"],
@@ -233,7 +233,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "巴生谷大部分电工的上门或检查费最高RM150。我们每次上门最低收费RM80，包括车马费和检查，而且开工前会在现场给你固定报价。我们一星期七天收费一样，周末也不例外。",
         ],
         table: {
-          head: ["上门类型", "市场价格", "KL Electrician"],
+          head: ["上门类型", "市场价格", "My Power Care KL"],
           rows: [
             ["上门检查（最低收费）", "最高RM150", "每次RM80"],
             ["查找故障与测试（第一小时）", "RM100 – RM400", "RM150"],
@@ -247,7 +247,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "我们的吊扇价格包括组装、调平衡和拆除旧吊扇，所以比最便宜的报价高。价格很低的（RM45 – RM60）通常假设吊钩和电位已经有了，而且吊扇是基本款。",
         ],
         table: {
-          head: ["项目", "市场价格", "KL Electrician"],
+          head: ["项目", "市场价格", "My Power Care KL"],
           rows: [
             ["更换灯具", "每盏RM15 – RM60", "每盏RM40 – RM80"],
             ["新装嵌入式LED筒灯", "每盏RM60 – RM150", "每盏RM100 – RM150"],
@@ -266,7 +266,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "热水器和冷气耗电量大，需要独立回路，配上正确的电线和断路器。所以新拉一个电位的价格，是在现有电位上换热水器的好几倍。新的热水器电位一定要配10mA RCCB，保障洗澡安全，我们的价格已包括在内。",
         ],
         table: {
-          head: ["项目", "市场价格", "KL Electrician"],
+          head: ["项目", "市场价格", "My Power Care KL"],
           rows: [
             ["热水器安装（已有电位）", "RM80 – RM250", "RM150 – RM250"],
             ["热水器连新电位 + 10mA RCCB", "RM200 – RM600", "RM350 – RM550"],
@@ -283,7 +283,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "大型工程的价格差距最大，因为不同报价在断路器品质、电线规格和打墙工作量上差别很大。一定要索取列明细项的报价。我们的三相电价格不包括TNB的接电费和押金，这部分由你直接付给TNB。",
         ],
         table: {
-          head: ["项目", "市场价格", "KL Electrician"],
+          head: ["项目", "市场价格", "My Power Care KL"],
           rows: [
             ["更换RCCB / ELCB", "RM140 – RM600", "RM250 – RM450"],
             ["更换单相电箱", "RM400 – RM3,500", "RM1,000 – RM2,000"],
@@ -416,7 +416,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "TNB会另外收取接电费和押金，金额视房屋类型和预计用电量而定，所以做预算前请先向TNB查询最新收费。如果电表板要移位、电缆距离长，或同时要重拉几条回路，我们的价格会偏向上限。",
         ],
         table: {
-          head: ["项目", "市场价格", "KL Electrician"],
+          head: ["项目", "市场价格", "My Power Care KL"],
           rows: [
             ["单相升级三相电（承包商工程）", "RM3,000 – RM10,000", "RM5,000 – RM8,000"],
             ["只更换三相电箱", "RM800 – RM4,500", "RM1,800 – RM3,500"],
@@ -509,7 +509,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "除非电线明显已经坏了，否则先做检查。检查会测试绝缘电阻和RCCB跳闸时间，检查接地、电箱和各个点位，并给你书面报告。结果常常显示只有部分房子需要处理，费用比全屋换电线低得多。",
         ],
         table: {
-          head: ["选项", "适合什么情况", "KL Electrician"],
+          head: ["选项", "适合什么情况", "My Power Care KL"],
           rows: [
             ["安全检查，公寓", "旧单位、刚买入、装修前", "RM250 – RM350"],
             ["安全检查，有地住宅", "老房子、刚买入、装修前", "RM350 – RM600"],

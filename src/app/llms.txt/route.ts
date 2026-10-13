@@ -49,7 +49,6 @@ export function GET() {
     "## Company",
     `- [About](${absoluteUrl("/about")})`,
     `- [FAQ](${absoluteUrl("/faq")})`,
-    `- [Reviews](${absoluteUrl("/reviews")})`,
     `- [Contact and booking](${absoluteUrl("/contact")})`,
     "",
   ];

@@ -10,9 +10,17 @@ export function languageAlternates(path: string) {
   };
 }
 
+// Google cuts titles at roughly 60–65 characters and already shows the site
+// name above each result, so the brand suffix is added only when it fits.
+const maxTitleLength = 65;
+
+/** Shared social preview (src/app/opengraph-image.tsx) for pages without their own photo. */
+const defaultImage = { url: "/opengraph-image", width: 1200, height: 630, alt: site.name };
+
 /**
  * Per-page metadata: canonical URL for this language, alternates for the
- * other two, and matching Open Graph tags.
+ * other two, and matching Open Graph tags (always with a preview image, which
+ * WhatsApp and Facebook show when the link is shared).
  */
 export function pageMetadata({
   locale,
@@ -36,9 +44,10 @@ export function pageMetadata({
   modifiedTime?: string;
 }): Metadata {
   const url = localePath(locale, path);
-  const ogTitle = absoluteTitle ? title : `${title} | ${site.name}`;
+  const branded = `${title} | ${site.name}`;
+  const fullTitle = absoluteTitle || branded.length > maxTitleLength ? title : branded;
   return {
-    title: absoluteTitle ? { absolute: title } : title,
+    title: { absolute: fullTitle },
     description,
     alternates: { canonical: url, languages: languageAlternates(path) },
     openGraph: {
@@ -47,9 +56,9 @@ export function pageMetadata({
       locale: localeInfo[locale].ogLocale,
       alternateLocale: locales.filter((l) => l !== locale).map((l) => localeInfo[l].ogLocale),
       url,
-      title: ogTitle,
+      title: fullTitle,
       description,
-      ...(image ? { images: [{ url: image }] } : {}),
+      images: [image ? { url: image } : defaultImage],
       ...(type === "article" ? { publishedTime, modifiedTime } : {}),
     },
   };

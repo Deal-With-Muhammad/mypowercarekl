@@ -31,7 +31,6 @@ export function MobileNav({
     language: string;
     hours: string;
     call: string;
-    callNumber: string;
     whatsapp: string;
     whatsappHref: string;
   };
@@ -40,15 +39,7 @@ export function MobileNav({
   const close = () => state.close();
 
   return (
-    <div className="flex items-center gap-1.5 lg:hidden">
-      <a
-        href={telLink}
-        data-cta="mobile-header"
-        aria-label={labels.callNumber}
-        className="grid size-10 pressable place-items-center rounded-md bg-brand-50 text-brand sm:hidden"
-      >
-        <PiPhoneFill className="size-5" />
-      </a>
+    <div className="flex items-center lg:hidden">
       <Button isIconOnly variant="ghost" aria-label={labels.openMenu} onPress={state.open} className="size-10">
         <PiListBold className="size-6" />
       </Button>
@@ -59,7 +50,7 @@ export function MobileNav({
             <Drawer.Dialog aria-label={labels.menu} className="flex h-full flex-col">
               <Drawer.Header className="flex flex-row items-center justify-between border-b border-line pb-4">
                 <span onClickCapture={close}>
-                  <Logo href={labels.home} className="w-[136px]" />
+                  <Logo href={labels.home} className="w-[176px]" />
                 </span>
                 <Button isIconOnly variant="ghost" aria-label={labels.closeMenu} onPress={close} size="sm">
                   <PiXBold className="size-5" />

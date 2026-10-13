@@ -18,7 +18,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "Julat harga pasaran sangat luas kerana ada sebut harga yang guna trunking permukaan dan kabel murah, manakala yang lain wiring tersembunyi sepenuhnya termasuk hacking dan plaster semula. Bandingkan bilangan point, saiz kabel dan apa yang tidak termasuk, bukan jumlah harga sahaja. Tanya sama ada DB box baru termasuk; rumah lama hampir selalu memerlukannya.",
         ],
         table: {
-          head: ["Jenis kediaman", "Harga pasaran (Lembah Klang)", "KL Electrician", "Tempoh biasa"],
+          head: ["Jenis kediaman", "Harga pasaran (Lembah Klang)", "My Power Care KL", "Tempoh biasa"],
           rows: [
             ["Kondo / apartmen (2–3 bilik)", "RM3,000 – RM12,000", "RM6,000 – RM10,000", "2–4 hari"],
             ["Rumah teres setingkat", "RM4,000 – RM15,000", "RM8,000 – RM13,000", "3–5 hari"],
@@ -205,7 +205,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "Jika kerosakan sebenarnya dalam peralatan, kami akan beritahu terus terang. Selalunya lebih murah untuk baiki atau tukar peralatan itu daripada membayar kerja elektrik tambahan. Kerosakan water heater dan aircond mungkin perlu juruteknik servis pengeluar sendiri, dan kami boleh pastikan bahagian wiring selamat dahulu.",
         ],
         table: {
-          head: ["Kerja", "Harga pasaran", "KL Electrician"],
+          head: ["Kerja", "Harga pasaran", "My Power Care KL"],
           rows: [
             ["Lawatan pemeriksaan (caj minimum)", "Sehingga RM150", "RM80 setiap lawatan"],
             ["Kesan kerosakan dan ujian (jam pertama)", "RM100 – RM400", "RM150"],
@@ -251,7 +251,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "Kebanyakan tukang elektrik di Lembah Klang mengenakan caj lawatan atau pemeriksaan sehingga RM150. Caj kami ialah caj minimum RM80 setiap lawatan, yang merangkumi pengangkutan dan pemeriksaan, dan anda dapat sebut harga tetap di tapak sebelum sebarang kerja bermula. Harga kami sama setiap hari dalam seminggu, termasuk hujung minggu.",
         ],
         table: {
-          head: ["Jenis lawatan", "Harga pasaran", "KL Electrician"],
+          head: ["Jenis lawatan", "Harga pasaran", "My Power Care KL"],
           rows: [
             ["Lawatan pemeriksaan (caj minimum)", "Sehingga RM150", "RM80 setiap lawatan"],
             ["Kesan kerosakan dan ujian (jam pertama)", "RM100 – RM400", "RM150"],
@@ -265,7 +265,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "Harga pasang kipas siling kami merangkumi pemasangan, imbangan kipas dan menanggalkan kipas lama, sebab itulah ia lebih tinggi daripada sebut harga paling murah. Harga yang sangat rendah (RM45 – RM60) biasanya menganggap cangkuk dan point sudah sedia ada dan kipas itu model asas.",
         ],
         table: {
-          head: ["Kerja", "Harga pasaran", "KL Electrician"],
+          head: ["Kerja", "Harga pasaran", "My Power Care KL"],
           rows: [
             ["Tukar lampu", "RM15 – RM60 setiap lampu", "RM40 – RM80 setiap lampu"],
             ["Downlight LED baru (potong siling)", "RM60 – RM150 setiap lampu", "RM100 – RM150 setiap lampu"],
@@ -284,7 +284,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "Water heater dan aircond menarik arus yang tinggi, jadi ia perlukan litar sendiri dengan kabel dan pemutus yang betul. Sebab itu point baru berharga beberapa kali ganda lebih mahal daripada tukar water heater pada point sedia ada. Point water heater baru sepatutnya sentiasa disertakan RCCB 10mA untuk keselamatan semasa mandi, dan point kami memang termasuk.",
         ],
         table: {
-          head: ["Kerja", "Harga pasaran", "KL Electrician"],
+          head: ["Kerja", "Harga pasaran", "My Power Care KL"],
           rows: [
             ["Pasang water heater (point sedia ada)", "RM80 – RM250", "RM150 – RM250"],
             ["Water heater dengan point baru + RCCB 10mA", "RM200 – RM600", "RM350 – RM550"],
@@ -301,7 +301,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "Kerja besar mempunyai julat harga paling luas, kerana kualiti pemutus, saiz kabel dan jumlah hacking sangat berbeza antara satu sebut harga dengan yang lain. Sentiasa minta sebut harga yang terperinci. Harga 3 phase kami tidak termasuk caj sambungan dan deposit TNB, yang anda bayar terus kepada TNB.",
         ],
         table: {
-          head: ["Kerja", "Harga pasaran", "KL Electrician"],
+          head: ["Kerja", "Harga pasaran", "My Power Care KL"],
           rows: [
             ["Tukar RCCB / ELCB", "RM140 – RM600", "RM250 – RM450"],
             ["Tukar DB box, single phase", "RM400 – RM3,500", "RM1,000 – RM2,000"],
@@ -438,7 +438,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "TNB mengenakan caj sambungan dan deposit sendiri, yang berbeza mengikut jenis premis dan jangkaan penggunaan, jadi semak kadar semasa dengan TNB sebelum membuat bajet. Harga kami menghampiri hujung atas jika papan meter perlu dialihkan, tarikan kabel panjang, atau beberapa litar perlu tukar wiring pada masa yang sama.",
         ],
         table: {
-          head: ["Perkara", "Harga pasaran", "KL Electrician"],
+          head: ["Perkara", "Harga pasaran", "My Power Care KL"],
           rows: [
             ["Tukar single phase ke 3 phase (kerja kontraktor)", "RM3,000 – RM10,000", "RM5,000 – RM8,000"],
             ["Tukar DB box 3 phase sahaja", "RM800 – RM4,500", "RM1,800 – RM3,500"],
@@ -531,7 +531,7 @@ export const guidesPart1: Record<string, GuideText> = {
           "Mulakan dengan pemeriksaan kecuali wiring jelas sudah rosak. Pemeriksaan menguji rintangan penebat dan masa trip RCCB, menyemak pembumian, DB box dan setiap point, dan memberi anda laporan bertulis. Selalunya ia menunjukkan hanya sebahagian rumah yang perlu dibaiki, yang kosnya jauh lebih rendah daripada tukar wiring penuh.",
         ],
         table: {
-          head: ["Pilihan", "Bila sesuai", "KL Electrician"],
+          head: ["Pilihan", "Bila sesuai", "My Power Care KL"],
           rows: [
             ["Pemeriksaan keselamatan, kondo", "Unit lama, baru dibeli, sebelum ubah suai", "RM250 – RM350"],
             ["Pemeriksaan keselamatan, rumah landed", "Rumah lama, baru dibeli, sebelum ubah suai", "RM350 – RM600"],

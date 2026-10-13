@@ -20,7 +20,7 @@ export const guides: Record<string, GuideText> = {
           "Market ranges are wide because some quotes use surface trunking and budget cable, while others are fully concealed with hacking and replastering included. Compare the number of points, the cable size and what is excluded, not just the total. Ask whether a new DB box is included; older houses almost always need one.",
         ],
         table: {
-          head: ["Property type", "Market range (Klang Valley)", "KL Electrician", "Typical duration"],
+          head: ["Property type", "Market range (Klang Valley)", "My Power Care KL", "Typical duration"],
           rows: [
             ["Condo / apartment (2–3 bed)", "RM3,000 – RM12,000", "RM6,000 – RM10,000", "2–4 days"],
             ["Single-storey terrace", "RM4,000 – RM15,000", "RM8,000 – RM13,000", "3–5 days"],
@@ -207,7 +207,7 @@ export const guides: Record<string, GuideText> = {
           "If the fault turns out to be inside an appliance, we will tell you plainly. It is often cheaper to repair or replace the appliance than to pay for more electrical work. Water heater and aircond faults may need the manufacturer's own service technician, and we can confirm the wiring side is safe first.",
         ],
         table: {
-          head: ["Job", "Market range", "KL Electrician"],
+          head: ["Job", "Market range", "My Power Care KL"],
           rows: [
             ["Inspection visit (minimum charge)", "Up to RM150", "RM80 per visit"],
             ["Fault finding and testing (first hour)", "RM100 – RM400", "RM150"],
@@ -253,7 +253,7 @@ export const guides: Record<string, GuideText> = {
           "Most electricians in the Klang Valley charge a visit or inspection fee of up to RM150. Ours is a minimum charge of RM80 per visit, which covers travel and inspection, and you get a fixed quote on site before any work begins. Our rates are the same every day of the week, weekends included.",
         ],
         table: {
-          head: ["Visit type", "Market range", "KL Electrician"],
+          head: ["Visit type", "Market range", "My Power Care KL"],
           rows: [
             ["Inspection visit (minimum charge)", "Up to RM150", "RM80 per visit"],
             ["Fault finding and testing (first hour)", "RM100 – RM400", "RM150"],
@@ -267,7 +267,7 @@ export const guides: Record<string, GuideText> = {
           "Our ceiling fan price covers assembly, balancing and removing the old fan, which is why it sits above the cheapest quotes. Very low prices (RM45 – RM60) usually assume the hook and point already exist and the fan is a basic model.",
         ],
         table: {
-          head: ["Job", "Market range", "KL Electrician"],
+          head: ["Job", "Market range", "My Power Care KL"],
           rows: [
             ["Light fitting replacement", "RM15 – RM60 per light", "RM40 – RM80 per light"],
             ["New cut-in LED downlight", "RM60 – RM150 per light", "RM100 – RM150 per light"],
@@ -286,7 +286,7 @@ export const guides: Record<string, GuideText> = {
           "Water heaters and airconds draw heavy current, so they need their own circuit with the right cable and breaker. That is why a new point costs several times more than swapping a heater on an existing one. A new water heater point should always include a 10mA RCCB for shower safety, and ours does.",
         ],
         table: {
-          head: ["Job", "Market range", "KL Electrician"],
+          head: ["Job", "Market range", "My Power Care KL"],
           rows: [
             ["Water heater installation (existing point)", "RM80 – RM250", "RM150 – RM250"],
             ["Water heater with new point + 10mA RCCB", "RM200 – RM600", "RM350 – RM550"],
@@ -303,7 +303,7 @@ export const guides: Record<string, GuideText> = {
           "Bigger jobs have the widest price spread, because breaker quality, cable size and the amount of hacking vary so much from quote to quote. Always ask for an itemised quote. Our 3-phase price excludes TNB's own connection fee and deposit, which you pay to TNB directly.",
         ],
         table: {
-          head: ["Job", "Market range", "KL Electrician"],
+          head: ["Job", "Market range", "My Power Care KL"],
           rows: [
             ["RCCB / ELCB replacement", "RM140 – RM600", "RM250 – RM450"],
             ["DB box replacement, single-phase", "RM400 – RM3,500", "RM1,000 – RM2,000"],
@@ -440,7 +440,7 @@ export const guides: Record<string, GuideText> = {
           "TNB charges its own connection fee and deposit, which vary with the type of premises and expected usage, so check the current rates with TNB before you budget. Our price goes towards the upper end if the meter board has to move, the cable run is long, or several circuits need rewiring at the same time.",
         ],
         table: {
-          head: ["Item", "Market range", "KL Electrician"],
+          head: ["Item", "Market range", "My Power Care KL"],
           rows: [
             ["Single to 3-phase upgrade (contractor work)", "RM3,000 – RM10,000", "RM5,000 – RM8,000"],
             ["3-phase DB box replacement only", "RM800 – RM4,500", "RM1,800 – RM3,500"],
@@ -533,7 +533,7 @@ export const guides: Record<string, GuideText> = {
           "Start with an inspection unless the wiring is obviously failing. An inspection tests insulation resistance and RCCB trip time, checks earthing, the DB box and the points, and gives you a written report. It often shows that only part of the house needs work, which costs far less than a full rewire.",
         ],
         table: {
-          head: ["Option", "When it makes sense", "KL Electrician"],
+          head: ["Option", "When it makes sense", "My Power Care KL"],
           rows: [
             ["Safety inspection, condo", "Older unit, new purchase, before renovation", "RM250 – RM350"],
             ["Safety inspection, landed", "Older house, new purchase, before renovation", "RM350 – RM600"],
@@ -582,7 +582,7 @@ export const guides: Record<string, GuideText> = {
           "Our RM1,800 – RM2,800 covers a dedicated circuit from the DB box, correctly sized cable, RCD protection, an isolator, mounting the wallbox, testing and a test charge with your car. If your car dealer offers free installation, check exactly what it includes before you pay for anything twice.",
         ],
         table: {
-          head: ["Setup", "Market range", "KL Electrician"],
+          head: ["Setup", "Market range", "My Power Care KL"],
           rows: [
             ["Labour and wiring only (your charger, landed)", "RM800 – RM2,500", "RM1,800 – RM2,800"],
             ["All-in with 7kW charger (landed)", "RM2,800 – RM6,250", "RM1,800 – RM2,800 plus charger at cost"],
@@ -737,7 +737,7 @@ export const guides: Record<string, GuideText> = {
           "If your existing point has no 10mA RCCB, we will recommend adding one before connecting the new heater. In some older condos, the heater shares a circuit with the bathroom lights or sockets; it should be moved onto its own breaker, since most instant heaters draw 15–16A on their own.",
         ],
         table: {
-          head: ["Job", "Market range", "KL Electrician"],
+          head: ["Job", "Market range", "My Power Care KL"],
           rows: [
             ["Water heater installation (existing point)", "RM80 – RM250", "RM150 – RM250"],
             ["Water heater with new point + 10mA RCCB", "RM200 – RM600", "RM350 – RM550"],
@@ -886,7 +886,7 @@ export const guides: Record<string, GuideText> = {
           "The price depends mostly on whether there is already a fan point and hook in the ceiling. The table compares typical Klang Valley quotes with our rates. Prices are labour only: you supply the fan, or we buy it at cost with the receipt shown.",
         ],
         table: {
-          head: ["Job", "Market range", "KL Electrician"],
+          head: ["Job", "Market range", "My Power Care KL"],
           rows: [
             ["Ceiling fan installation (existing point)", "RM80 – RM150", "RM200 per fan"],
             ["Ceiling fan with new fan point", "RM150 – RM330", "RM300 – RM400"],

@@ -15,7 +15,7 @@ export const guidesPart2: Record<string, GuideText> = {
           "Harga kami RM1,800 – RM2,800 merangkumi litar khas dari DB box, kabel bersaiz betul, perlindungan RCD, isolator, pemasangan wallbox, ujian dan cas percubaan dengan kereta anda. Jika pengedar kereta anda menawarkan pemasangan percuma, semak apa sebenarnya yang termasuk supaya anda tidak membayar dua kali.",
         ],
         table: {
-          head: ["Jenis pemasangan", "Harga pasaran", "KL Electrician"],
+          head: ["Jenis pemasangan", "Harga pasaran", "My Power Care KL"],
           rows: [
             ["Upah dan wiring sahaja (charger sendiri, rumah landed)", "RM800 – RM2,500", "RM1,800 – RM2,800"],
             [
@@ -187,7 +187,7 @@ export const guidesPart2: Record<string, GuideText> = {
           "Jika point sedia ada anda tiada RCCB 10mA, kami akan cadangkan ia ditambah sebelum menyambung heater baru. Di sesetengah kondo lama, heater berkongsi litar dengan lampu atau plug point bilik air; ia patut dipindahkan ke breaker sendiri, kerana kebanyakan instant water heater sahaja sudah menarik 15–16A.",
         ],
         table: {
-          head: ["Kerja", "Harga pasaran", "KL Electrician"],
+          head: ["Kerja", "Harga pasaran", "My Power Care KL"],
           rows: [
             ["Pasang water heater (point sedia ada)", "RM80 – RM250", "RM150 – RM250"],
             ["Water heater dengan point baru + RCCB 10mA", "RM200 – RM600", "RM350 – RM550"],
@@ -338,7 +338,7 @@ export const guidesPart2: Record<string, GuideText> = {
           "Harga banyak bergantung pada sama ada sudah ada point kipas dan cangkuk di siling. Jadual di bawah membandingkan sebut harga biasa di Lembah Klang dengan kadar kami. Harga ialah upah sahaja: anda bekalkan kipas, atau kami belikan pada harga kos dengan resit ditunjukkan.",
         ],
         table: {
-          head: ["Kerja", "Harga pasaran", "KL Electrician"],
+          head: ["Kerja", "Harga pasaran", "My Power Care KL"],
           rows: [
             ["Pasang kipas siling (point sedia ada)", "RM80 – RM150", "RM200 setiap kipas"],
             ["Kipas siling dengan point kipas baru", "RM150 – RM330", "RM300 – RM400"],

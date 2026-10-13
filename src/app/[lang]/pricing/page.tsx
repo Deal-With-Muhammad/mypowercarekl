@@ -96,7 +96,7 @@ export default async function PricingPage(props: PageProps<"/[lang]/pricing">) {
             </div>
           </section>
         </div>
-        <aside className="lg:sticky lg:top-32 lg:self-start">
+        <aside className="hidden lg:sticky lg:top-32 lg:block lg:self-start">
           <QuoteSidebar heading={t.pricing.sidebarTitle} message={t.whatsapp.price} />
         </aside>
       </div>

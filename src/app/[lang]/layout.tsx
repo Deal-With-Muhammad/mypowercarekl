@@ -5,7 +5,6 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import "../globals.css";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { FloatingContact } from "@/components/site/FloatingContact";
 import { ContactClickTracker } from "@/components/site/Analytics";
 import { JsonLd } from "@/components/JsonLd";
 import { businessSchema } from "@/lib/schema";
@@ -66,9 +65,8 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
       <body className="flex min-h-dvh flex-col bg-background text-foreground">
         <JsonLd data={businessSchema(lang)} />
         <Header />
-        <main className="flex-1 pb-16 lg:pb-0">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
-        <FloatingContact />
         <ContactClickTracker />
       </body>
       {gaId ? <GoogleAnalytics gaId={gaId} /> : null}

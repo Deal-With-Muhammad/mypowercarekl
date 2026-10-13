@@ -1,18 +1,15 @@
 import Image from "next/image";
-import { FaWhatsapp } from "react-icons/fa";
-import { PiPhoneFill } from "react-icons/pi";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
-import { getI18n } from "@/i18n/server";
-import { telLink, whatsappLink, site } from "@/lib/site";
 
-export async function PageHero({
+// No contact buttons here: phone and WhatsApp sit in the sticky header, and
+// each page closes with one call to action.
+export function PageHero({
   crumbs,
   eyebrow,
   title,
   intro,
   image,
   imageAlt = "",
-  whatsappMessage,
   facts,
   children,
 }: {
@@ -22,11 +19,9 @@ export async function PageHero({
   intro: string;
   image?: string;
   imageAlt?: string;
-  whatsappMessage?: string;
   facts?: { label: string; value: string }[];
   children?: React.ReactNode;
 }) {
-  const { t } = await getI18n();
   return (
     <section className="border-b border-line bg-canvas">
       <div className="container-page grid items-center gap-10 py-10 lg:grid-cols-[1.2fr_1fr] lg:py-14">
@@ -37,24 +32,6 @@ export async function PageHero({
             {title}
           </h1>
           <p className="mt-4 max-w-2xl text-[1.0625rem] leading-relaxed text-slate-text">{intro}</p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <a
-              href={whatsappLink(whatsappMessage ?? t.whatsapp.default)}
-              target="_blank"
-              rel="noopener"
-              data-cta="page-hero"
-              className="button button--lg w-full bg-whatsapp px-6 text-white hover:bg-whatsapp-dark sm:w-auto"
-            >
-              <FaWhatsapp className="size-5" aria-hidden /> {t.cta.whatsappQuote}
-            </a>
-            <a
-              href={telLink}
-              data-cta="page-hero"
-              className="button button--lg button--outline w-full bg-white px-6 sm:w-auto"
-            >
-              <PiPhoneFill className="size-5 text-brand" aria-hidden /> {site.phoneDisplay}
-            </a>
-          </div>
           {facts && (
             <dl className="mt-8 grid grid-cols-3 gap-3">
               {facts.map((f) => (

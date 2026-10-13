@@ -15,7 +15,7 @@ export const guidesPart2: Record<string, GuideText> = {
           "我们的RM1,800 – RM2,800包括：从电箱拉一条独立电路、规格正确的电线、RCD漏电保护、隔离开关、安装充电桩、测试，以及用您的车试充电。如果车行提供免费安装，付款前先确认具体包括哪些项目，以免重复付费。",
         ],
         table: {
-          head: ["项目", "市场价格", "KL Electrician"],
+          head: ["项目", "市场价格", "My Power Care KL"],
           rows: [
             ["只含人工与拉线（自备充电桩，有地住宅）", "RM800 – RM2,500", "RM1,800 – RM2,800"],
             ["连7kW充电桩全包（有地住宅）", "RM2,800 – RM6,250", "RM1,800 – RM2,800，另加充电桩（按成本价）"],
@@ -162,7 +162,7 @@ export const guidesPart2: Record<string, GuideText> = {
           "如果您现有的电源点没有10mA RCCB，我们会建议先加装，再接上新热水器。一些较旧的公寓里，热水器与浴室的灯或插座共用一条电路；由于大多数即热式热水器单独就要用15–16A，应改接到独立的断路器上。",
         ],
         table: {
-          head: ["工程", "市场价格", "KL Electrician"],
+          head: ["工程", "市场价格", "My Power Care KL"],
           rows: [
             ["热水器安装（现有电源点）", "RM80 – RM250", "RM150 – RM250"],
             ["热水器连新电源点 + 10mA RCCB", "RM200 – RM600", "RM350 – RM550"],
@@ -307,7 +307,7 @@ export const guidesPart2: Record<string, GuideText> = {
           "价格主要看天花板上是否已有吊扇电源点和吊钩。下表比较巴生谷一般报价与我们的收费。价格只含人工：吊扇由您自备，或由我们按成本价代购并出示收据。",
         ],
         table: {
-          head: ["工程", "市场价格", "KL Electrician"],
+          head: ["工程", "市场价格", "My Power Care KL"],
           rows: [
             ["吊扇安装（现有电源点）", "RM80 – RM150", "每台RM200"],
             ["吊扇连新拉电源点", "RM150 – RM330", "RM300 – RM400"],

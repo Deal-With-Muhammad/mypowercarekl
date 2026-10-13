@@ -71,7 +71,6 @@ export default async function ServicePage(props: PageProps<"/[lang]/services/[sl
         intro={service.intro}
         image={service.image}
         imageAlt={t.service.imageAlt(service.name)}
-        whatsappMessage={message}
         facts={[
           { label: t.service.priceFrom, value: formatRM(service.priceFrom) },
           { label: t.service.service, value: t.service.sameDay },
@@ -173,7 +172,7 @@ export default async function ServicePage(props: PageProps<"/[lang]/services/[sl
           </section>
         </article>
 
-        <aside className="space-y-6 lg:sticky lg:top-32 lg:self-start">
+        <aside className="hidden lg:sticky lg:top-32 lg:block lg:self-start">
           <QuoteSidebar heading={t.service.quoteTitle(lowerName)} message={message} />
         </aside>
       </div>

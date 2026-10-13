@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { site } from "@/lib/site";
 
 /**
  * Brand logo (vector artwork in /public). `inverted` is for dark backgrounds.
@@ -20,8 +21,8 @@ export function Logo({
     <Link href={href} className={`block min-w-0 shrink pressable ${className}`}>
       <Image
         src={inverted ? "/logo-light.svg" : "/logo.svg"}
-        alt="KL Electrician"
-        width={313}
+        alt={site.name}
+        width={394}
         height={64}
         unoptimized
         preload={!inverted}

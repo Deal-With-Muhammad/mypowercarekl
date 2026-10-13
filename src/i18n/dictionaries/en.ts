@@ -5,7 +5,7 @@ import type { GuideCategory, StateKey, UnitKey } from "@/lib/types";
 
 const en = {
   meta: {
-    siteTitle: "Electrician in Kuala Lumpur & Selangor | KL Electrician",
+    siteTitle: "Electrician in Kuala Lumpur & Selangor | My Power Care KL",
     siteDescription:
       "Same-day electrician in KL & Selangor for tripping, wiring, DB box, lighting, sockets and water heaters. Upfront prices, 12-month warranty. WhatsApp for a quote.",
     tagline: "Same-day electrician for homes and businesses in Kuala Lumpur and the Klang Valley",
@@ -15,19 +15,18 @@ const en = {
     short: "Open daily 8am–10pm",
   },
   whatsapp: {
-    default: "Hi KL Electrician, I need an electrician. Can you help?",
-    service: (name: string) => `Hi KL Electrician, I need help with: ${name}.`,
-    area: (name: string) => `Hi KL Electrician, I need an electrician in ${name}.`,
-    price: "Hi KL Electrician, can I get a price for this job?",
-    question: "Hi KL Electrician, I have a question:",
-    guide: (title: string) => `Hi KL Electrician, I read your guide "${title}" and have a question.`,
+    default: "Hi My Power Care KL, I need an electrician. Can you help?",
+    service: (name: string) => `Hi My Power Care KL, I need help with: ${name}.`,
+    area: (name: string) => `Hi My Power Care KL, I need an electrician in ${name}.`,
+    price: "Hi My Power Care KL, can I get a price for this job?",
+    question: "Hi My Power Care KL, I have a question:",
+    guide: (title: string) => `Hi My Power Care KL, I read your guide "${title}" and have a question.`,
   },
   nav: {
     services: "Services",
     pricing: "Pricing",
     areas: "Areas",
     areasLong: "Areas we cover",
-    reviews: "Reviews",
     guides: "Guides",
     faq: "FAQ",
     about: "About",
@@ -44,7 +43,6 @@ const en = {
     closeMenu: "Close menu",
     menu: "Site menu",
     language: "Language",
-    quickContact: "Quick contact",
   },
   cta: {
     whatsapp: "WhatsApp",
@@ -118,12 +116,11 @@ const en = {
     ],
   },
   home: {
-    metaTitle: "Electrician in Kuala Lumpur & Selangor | Same-Day | KL Electrician",
+    metaTitle: "Electrician in Kuala Lumpur & Selangor | My Power Care KL",
     metaDescription:
       "Same-day electrician in KL & Selangor: tripping, wiring, DB box, lighting, sockets and water heaters. Fixed quote first, visit RM80, 12-month warranty. WhatsApp us.",
     h1: "Electrician in Kuala Lumpur & Selangor",
     sub: "Repairs, wiring and installations for homes, condos and shops. A fixed price before we start.",
-    rating: (n: number) => `from ${n} reviews`,
     carouselLabel: "Our electrical services",
     showSlide: (label: string) => `Show ${label}`,
     slides: {
@@ -169,29 +166,13 @@ const en = {
       hours,
     ],
   },
-  reviews: {
-    eyebrow: "Reviews",
-    title: "What customers say",
-    areaTitle: (name: string) => `Reviews from ${name} and nearby`,
-    basedOn: (n: number) => `Based on ${n} customer reviews`,
-    readAll: "Read all reviews",
-    stars: (n: number) => `${n} out of 5 stars`,
-    google: "Google review",
-    metaTitle: "Customer Reviews",
-    metaDescription:
-      "What customers in Kuala Lumpur, Petaling Jaya, Subang Jaya, Shah Alam and across the Klang Valley say about KL Electrician.",
-    h1: "Customer reviews",
-    intro: "Feedback from homeowners, landlords and shop owners across the Klang Valley.",
-    leaveText: "Had work done by us? We'd appreciate your feedback.",
-    leave: "Leave a Google review",
-  },
   service: {
     priceFrom: "Price from",
     service: "Service",
     sameDay: "Same day",
     warranty: "Warranty",
     months: (m: number) => `${m} months`,
-    imageAlt: (name: string) => `${name} by KL Electrician`,
+    imageAlt: (name: string) => `${name} by My Power Care KL`,
     signsTitle: (name: string) => `Signs you need ${name}`,
     costTitle: (name: string) => `How much does ${name} cost in KL?`,
     costText: (name: string, updated: string) =>
@@ -212,10 +193,11 @@ const en = {
     intro: (n: number) =>
       `${n} services for homes, condos and shops, from a single socket to a full rewire. Every job is quoted before we start, tested before we leave and covered by our workmanship warranty.`,
     categoriesLabel: "Service categories",
-    listName: "Electrical services by KL Electrician",
+    listName: "Electrical services by My Power Care KL",
   },
   area: {
-    metaTitle: (name: string, state: string) => `Electrician in ${name}, ${state}: Same-Day Service`,
+    metaTitle: (name: string, state: string) =>
+      `Electrician in ${name.endsWith(state) ? name : `${name}, ${state}`}: Same-Day Service`,
     metaDescription: (name: string, visit: string, months: number) =>
       `Same-day electrician in ${name} for tripping, wiring, DB box, lighting and water heaters. Upfront prices, visit ${visit}, ${months}-month warranty. WhatsApp us.`,
     eyebrow: (state: string) => `${state} · Electrician near you`,
@@ -250,7 +232,7 @@ const en = {
   areas: {
     metaTitle: "Areas We Cover in KL, Selangor & Putrajaya",
     metaDescription:
-      "Electrician service areas across the Klang Valley: Kuala Lumpur, Petaling Jaya, Subang Jaya, Shah Alam, Klang, Puchong, Cheras, Kajang, Cyberjaya, Putrajaya and more.",
+      "Electrician service areas across the Klang Valley: Kuala Lumpur, Petaling Jaya, Subang Jaya, Shah Alam, Klang, Puchong, Cheras, Kajang, Putrajaya and more.",
     h1: "Electrician service areas in the Klang Valley",
     intro: (n: number) =>
       `We cover ${n} areas across Kuala Lumpur, Selangor and Putrajaya with the same prices everywhere and no travel surcharge. Choose your area for local arrival times, common issues and FAQs.`,
@@ -270,21 +252,21 @@ const en = {
     sidebarTitle: "Get an exact price",
   },
   faqPage: {
-    metaTitle: "Electrician FAQ: Prices, Tripping, Wiring & Booking",
+    metaTitle: "Electrician FAQ: Prices, Tripping & Wiring",
     metaDescription:
-      "Straight answers about hiring an electrician in Kuala Lumpur and Selangor: prices, same-day visits, tripping, sparking sockets, rewiring, water heaters and EV chargers.",
+      "Straight answers about hiring an electrician in Kuala Lumpur and Selangor: prices, same-day visits, tripping, rewiring, water heaters and EV chargers.",
     h1: "Frequently asked questions",
     intro: "Straight answers about booking, prices, warranty and the electrical problems we see most in Klang Valley homes.",
     sidebarTitle: "Still have a question?",
   },
   guides: {
-    metaTitle: "Electrical Guides & Cost Guides for Malaysian Homes",
+    metaTitle: "Electrical & Cost Guides for Malaysian Homes",
     metaDescription:
       "Practical guides from a Klang Valley electrician: rewiring costs, why your house keeps tripping, 3-phase upgrades, EV chargers and water heater safety.",
     h1: "Guides for Malaysian homeowners",
     intro: "Prices, rules and practical fixes, written by electricians who do this work every day in Kuala Lumpur and Selangor.",
     minRead: (n: number) => `${n} min read`,
-    by: "By the KL Electrician team",
+    by: "By the My Power Care KL team",
     updated: "Updated",
     shortAnswer: "Short answer",
     inThisGuide: "In this guide",
@@ -302,12 +284,12 @@ const en = {
   about: {
     metaTitle: "About Us",
     metaDescription:
-      "KL Electrician provides electrical repairs, wiring and installations across Kuala Lumpur, Selangor and Putrajaya. Same-day service, fixed quotes and a 12-month warranty.",
+      "My Power Care KL does electrical repairs, wiring and installations across Kuala Lumpur, Selangor and Putrajaya. Same-day service, fixed quotes, 12-month warranty.",
     h1: "Electrical work done right, the first time",
     p1: (years: number) =>
-      `KL Electrician handles electrical repairs, wiring and installations for homes, condos and shops across Kuala Lumpur, Selangor and Putrajaya. Our team brings ${years} years of experience to every job.`,
+      `My Power Care KL handles electrical repairs, wiring and installations for homes, condos and shops across Kuala Lumpur, Selangor and Putrajaya. Our team brings ${years} years of experience to every job.`,
     p2: "We keep it simple: clear prices, same-day visits, tidy work and a warranty you can count on.",
-    imageAlt: "KL Electrician electrician at work",
+    imageAlt: "My Power Care KL electrician at work",
     eyebrow: "How we work",
     title: "What you can expect",
     promises: (months: number) => [
@@ -324,7 +306,7 @@ const en = {
     pricesTitle: "See what we charge",
     pricesText: "Our price list is public, so you know what to expect.",
     pricesButton: "View price list",
-    schemaName: "About KL Electrician",
+    schemaName: "About My Power Care KL",
   },
   contact: {
     metaTitle: "Contact & Book an Electrician in KL",
@@ -333,7 +315,7 @@ const en = {
     h1: "Contact us or book an electrician",
     intro:
       "WhatsApp is the quickest way to reach us. Send your location and a photo of the problem and we'll reply with a price range and the earliest time we can come.",
-    schemaName: "Contact KL Electrician",
+    schemaName: "Contact My Power Care KL",
     whatsappTitle: "WhatsApp (fastest)",
     whatsappNote: "Send a photo or video for a quick price",
     callTitle: "Call",
@@ -373,9 +355,9 @@ const en = {
     successTitle: "Request received",
     successText: "Thanks. We'll call or WhatsApp you shortly to confirm the price and a time. For anything urgent, message us directly.",
     successButton: "Message us on WhatsApp",
-    successMessage: "Hi KL Electrician, I just sent a booking request:",
+    successMessage: "Hi My Power Care KL, I just sent a booking request:",
     unconfigured: "Online booking isn't connected yet. Tap below to send the same details on WhatsApp.",
-    unconfiguredMessage: "Hi KL Electrician, I'd like to book:",
+    unconfiguredMessage: "Hi My Power Care KL, I'd like to book:",
     sendWhatsapp: "Send on WhatsApp",
     errors: {
       name: "Please enter your name.",
@@ -402,7 +384,7 @@ const en = {
   },
   privacy: {
     metaTitle: "Privacy Policy",
-    metaDescription: "How KL Electrician collects, uses and protects your personal data under Malaysia's PDPA 2010.",
+    metaDescription: "How My Power Care KL collects, uses and protects your personal data under Malaysia's PDPA 2010.",
     h1: "Privacy policy",
     updated: "Last updated 1 October 2026",
     intro: (company: string) =>

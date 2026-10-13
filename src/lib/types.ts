@@ -166,13 +166,3 @@ export type LocaleContent = {
   pricing: PricingText;
   categories: CategoryText;
 };
-
-export type Review = {
-  name: string;
-  area: string;
-  service: string;
-  rating: number;
-  /** Relative time label, e.g. "2 weeks ago". */
-  when: string;
-  text: string;
-};

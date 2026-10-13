@@ -2,23 +2,20 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FaWhatsapp } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
-import { PiArrowRightBold, PiCheckCircleFill, PiMapPinDuotone, PiPhoneFill, PiStarFill } from "react-icons/pi";
+import { PiArrowRightBold, PiCheckCircleFill, PiMapPinDuotone, PiReceiptDuotone } from "react-icons/pi";
 import { HeroCarousel, type HeroSlide } from "@/components/home/HeroCarousel";
 import { ServiceTile } from "@/components/sections/ServiceCard";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import { TrustBar, ProcessSteps } from "@/components/sections/TrustSections";
-import { ReviewsSection } from "@/components/sections/Reviews";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { PriceTable } from "@/components/sections/PriceTable";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/JsonLd";
 import { getAreas, getHomeFaqs, getServices, getServicesBySlug, priceRows, shortAreaName } from "@/lib/content";
 import { formatRM, visitFee } from "@/data/pricing";
-import { averageRating, reviews } from "@/data/reviews";
 import { faqSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
-import { site, telLink, whatsappLink } from "@/lib/site";
+import { whatsappLink } from "@/lib/site";
 import { isLocale, localePath } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
@@ -69,7 +66,6 @@ export default async function HomePage(props: PageProps<"/[lang]">) {
   const featuredAreas = getAreas(lang).filter((a) => a.featured);
   const areaCount = getAreas(lang).length;
   const faqs = getHomeFaqs(lang);
-  const avg = averageRating();
 
   const slides: HeroSlide[] = slideDefs.map((s) => {
     const service = allServices.find((x) => x.slug === s.service)!;
@@ -113,25 +109,14 @@ export default async function HomePage(props: PageProps<"/[lang]">) {
                 <span className="sm:hidden">{t.cta.whatsapp}</span>
                 <span className="hidden sm:inline">{t.cta.heroWhatsapp}</span>
               </a>
-              <a
-                href={telLink}
-                data-cta="hero"
+              <Link
+                href={href("/pricing")}
                 className="button button--lg h-12 w-full bg-white/10 px-4 text-base text-white ring-1 ring-white/25 backdrop-blur hover:bg-white/15 sm:w-auto sm:px-6"
               >
-                <PiPhoneFill className="size-5" aria-hidden />
-                <span className="sm:hidden">{t.cta.call}</span>
-                <span className="hidden sm:inline">{site.phoneDisplay}</span>
-              </a>
-            </div>
-            <div className="mt-5 flex items-center gap-2 text-sm text-white/80 sm:mt-7">
-              <FcGoogle className="size-5" aria-hidden />
-              <span className="font-semibold text-white">{avg.toFixed(1)}</span>
-              <span className="flex text-spark" aria-hidden>
-                {Array.from({ length: 5 }, (_, i) => (
-                  <PiStarFill key={i} className="size-4" />
-                ))}
-              </span>
-              <span>{t.home.rating(reviews.length)}</span>
+                <PiReceiptDuotone className="size-5" aria-hidden />
+                <span className="sm:hidden">{t.cta.prices}</span>
+                <span className="hidden sm:inline">{t.home.fullPriceList}</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -188,10 +173,8 @@ export default async function HomePage(props: PageProps<"/[lang]">) {
 
       <ProcessSteps />
 
-      <ReviewsSection limit={3} />
-
       {/* Areas */}
-      <section className="py-16 sm:py-20">
+      <section className="bg-canvas py-16 sm:py-20">
         <div className="container-page">
           <SectionHeading eyebrow={t.home.areasEyebrow} title={t.home.areasTitle} description={t.home.areasText} />
           <ul className="mt-8 flex flex-wrap gap-2">
@@ -219,7 +202,7 @@ export default async function HomePage(props: PageProps<"/[lang]">) {
       </section>
 
       {/* FAQ */}
-      <section className="bg-canvas py-16 sm:py-20">
+      <section className="py-16 sm:py-20">
         <div className="container-page grid grid-cols-1 gap-10 lg:grid-cols-[0.7fr_1.3fr]">
           <div>
             <SectionHeading eyebrow={t.home.faqEyebrow} title={t.home.faqTitle} description={t.home.faqText} />
